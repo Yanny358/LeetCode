@@ -20,7 +20,6 @@ namespace Rotate_Array
             
             if (nums == null || nums.Length == 0) return;
 
-            //int len = nums.Length;
             k %= nums.Length;
             reverse(nums, 0, nums.Length - 1);
             reverse(nums, 0,k -1);
@@ -31,9 +30,7 @@ namespace Rotate_Array
         {
             while (start < end)
             {
-                int temp = nums[start];
-                nums[start] = nums[end];
-                nums[end] = temp;
+                (nums[start], nums[end]) = (nums[end], nums[start]);
                 start++;
                 end--;
             }

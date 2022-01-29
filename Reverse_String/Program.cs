@@ -12,7 +12,7 @@ namespace Reverse_String
 
             foreach (var c in str)
             {
-                Console.WriteLine(c);
+                Console.Write(c);
             }
         }
         

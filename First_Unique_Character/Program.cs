@@ -7,7 +7,7 @@ namespace First_Unique_Character
     {
         static void Main(string[] args)
         {
-            string nums = "leetcode";
+            string nums = "aaaabbbccd";
             int single = FirstUniqChar(nums);
             Console.WriteLine(single);
         }

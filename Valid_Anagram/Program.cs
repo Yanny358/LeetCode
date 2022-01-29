@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Valid_Anagram
 {
@@ -18,41 +19,15 @@ namespace Valid_Anagram
             {
                 return false;
             }
-            Dictionary<char,int> collection = new Dictionary<char,int>();
 
-            foreach (var c in s)
-            {
-                if(collection.ContainsKey(c))
-                {
-                    collection[c]++;
-                    continue;
-                }
-                collection.Add(c, 1);
-            }
+            char[] sChar = s.ToCharArray();
+            char[] tChar = t.ToCharArray();
+            Array.Sort(sChar);
+            Array.Sort(tChar);
+            
+            bool isEqual = sChar.SequenceEqual(tChar);
 
-            for (int i = 0; i < t.Length; i++)
-            {
-
-                if (collection.ContainsKey(t[i]))
-                {
-                    collection[t[i]]--;
-                }
-            }
-
-            for (int i = 0; i < t.Length; i++)
-            {
-                if (!collection.ContainsKey(t[i]))
-                {
-                    return false;
-                }
-
-                if (collection[t[i]] != 0)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return isEqual;
         }
     }
 }

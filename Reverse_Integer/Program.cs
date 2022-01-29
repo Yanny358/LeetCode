@@ -7,7 +7,7 @@ namespace Reverse_Integer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Reverse(123)); }
+            Console.WriteLine(Reverse(1534236469)); }
 
         public static int Reverse(int x)
         {
@@ -19,12 +19,9 @@ namespace Reverse_Integer
             {
                 int remainder = x % 10;
                 reverseNumber = reverseNumber * 10 + remainder;
-                if ((reverseNumber - remainder) / 10 != result)
-                {
-                    return 0;
-                }
-
-                x = x / 10;
+                if ((reverseNumber - remainder) / 10 != result) return 0;
+                      
+                x /= 10;
                 result = reverseNumber;
             }
 
