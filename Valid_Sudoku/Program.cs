@@ -26,22 +26,20 @@ namespace Valid_Sudoku
         public static bool IsValidSudoku(char[][] board)
         {
             HashSet<string> map = new HashSet<string>();
-
+            
             for (int row = 0; row < board.Length; row++)
             {
                 for (int column = 0; column < board.Length; column++)
                 {
-                    char box = board[row][column];
-                    string subbox = $"{box} at subbox {row / 3} {column / 3}";
-
-                    if (box == '.')
+                    char number = board[row][column];
+                    if (number == '.')
                     {
                         continue;
                     }
 
-                    if (!map.Add($"{box} at row {row}") ||
-                        !map.Add($"{box} at column {column}") ||
-                        !map.Add($"{box} at subbox {subbox}"))
+                    if (!map.Add($"{number} at row {row}") || 
+                        !map.Add($"{number} at column {column}") || 
+                        !map.Add($"{number} at subbox {row / 3} {column / 3} "))
                     {
                         return false;
                     }

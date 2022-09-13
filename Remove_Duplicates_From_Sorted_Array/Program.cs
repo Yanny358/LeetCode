@@ -7,12 +7,7 @@ namespace Remove_Duplicates_From_Sorted_Array
     {
         static void Main(string[] args)
         {
-            int[] nums = new[] {1,1,2};
-            RemoveDuplicates(nums);
-            foreach (var n in nums)
-            {
-                Console.WriteLine(n);
-            }
+            int[] nums = new[] {0,0,1,1,2,2,3,3,3,4};
 
             int uniq = RemoveDuplicates(nums);
             Console.WriteLine("Unique numbers in array: ");

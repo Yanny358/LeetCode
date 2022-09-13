@@ -20,14 +20,30 @@ namespace Valid_Anagram
                 return false;
             }
 
-            char[] sChar = s.ToCharArray();
-            char[] tChar = t.ToCharArray();
-            Array.Sort(sChar);
-            Array.Sort(tChar);
-            
-            bool isEqual = sChar.SequenceEqual(tChar);
+            Dictionary<char, int> sMap = new Dictionary<char, int>();
 
-            return isEqual;
+            foreach (var character in s)
+            {
+                if (!sMap.ContainsKey(character))
+                {
+                    sMap.Add(character, 1);
+                    continue;
+                }
+
+                sMap[character]++;
+            }
+
+            foreach (var character in t)
+            {
+                if (!sMap.ContainsKey(character) || sMap[character] == 0)
+                {
+                    return false;
+                }
+
+                sMap[character]--;
+            }
+
+            return true;
         }
     }
 }

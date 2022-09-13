@@ -14,28 +14,26 @@ namespace First_Unique_Character
         
         public static int FirstUniqChar(string s)
         {
-            Dictionary<char,int> collection = new Dictionary<char,int>();
-    
-            foreach(var item in s)
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            foreach (var character in s)
             {
-                if(collection.ContainsKey(item))
+                if (!map.ContainsKey(character))
                 {
-                    collection[item]++;
+                    map.Add(character, 1);
                     continue;
                 }
-               
-                collection.Add(item, 1);
-                  
+
+                map[character]++;
             }
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (collection[s[i]] == 1)
+                if (map[s[i]] == 1)
                 {
                     return i;
                 }
             }
-    
+
             return -1;
         }
     }

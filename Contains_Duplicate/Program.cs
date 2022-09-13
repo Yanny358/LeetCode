@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Contains_Duplicate
 {
@@ -14,11 +12,7 @@ namespace Contains_Duplicate
         
         public static bool ContainsDuplicate(int[] nums)
         {
-            if (nums.Distinct().Count() != nums.Length)
-            {
-                return true;
-            }
-            return false;
+            return nums.Distinct().Count() != nums.Length;
         }
     }
 }

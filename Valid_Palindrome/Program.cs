@@ -14,20 +14,28 @@ namespace Valid_Palindrome
 
         public static bool IsPalindrome(string s)
         {
-            s = s.ToLower();
-            Regex rgx = new Regex("[^a-zA-Z0-9]");
-            s = rgx.Replace(s, "");
-            Console.WriteLine(s);
-            var reverse = Reverse(s);
-            Console.WriteLine(reverse);
-            return String.Equals(s, reverse);
-        }
-
-        public static string Reverse(string s)
-        {
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
+            int start = 0;
+            int end = s.Length - 1;
+            while(start < end){
+                if(!char.IsLetter(s[start])){
+                    start++;
+                    continue;
+                }
+            
+                if(!char.IsLetter(s[end])){
+                    end--;
+                    continue;
+                }
+            
+                if(char.ToLower(s[start]) != char.ToLower(s[end])){
+                    return false;
+                }
+            
+                start++;
+                end--;
+            }
+        
+            return true;
         }
     }
 }
