@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Microsoft
 {
     internal class Program
@@ -7,7 +6,7 @@ namespace Microsoft
         static void Main(string[] args)
         {
             string s1 = "ab";
-            string goal = "ab";
+            string goal = "ba";
             //Console.WriteLine(BuddyStrings(s1,goal));
             string bigS = "aabcASDB";
             Console.WriteLine(one(bigS));
@@ -52,6 +51,7 @@ namespace Microsoft
 
             return "NO";
         }
+        
 
         public static bool BuddyStrings(string s, string goal)
         {

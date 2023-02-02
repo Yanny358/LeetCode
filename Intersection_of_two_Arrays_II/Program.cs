@@ -31,14 +31,12 @@ namespace Intersection_of_two_Arrays_II
 
             foreach (int num in nums2)
             {
-                if (map.ContainsKey(num))
+                if (!map.ContainsKey(num)) continue;
+                map[num]--;
+                result.Add(num);
+                if (map[num] == 0)
                 {
-                    map[num]--;
-                    result.Add(num);
-                    if (map[num] == 0)
-                    {
-                        map.Remove(num);
-                    }
+                    map.Remove(num);
                 }
             }
 

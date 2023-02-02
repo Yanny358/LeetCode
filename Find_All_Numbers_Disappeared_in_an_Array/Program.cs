@@ -10,20 +10,20 @@ foreach (var num in res)
 
 IList<int> FindDisappearedNumbers(int[] nums)
 {
-    HashSet<int> set = new HashSet<int>();
-    for (int i = 1; i <= nums.Length; i++)
+    HashSet<int> numbers = new HashSet<int>();
+    List<int> missingNumbers = new List<int>();
+    foreach (var n in nums)
     {
-        set.Add(i);
+        numbers.Add(n);
     }
 
-    foreach (var num in nums)
+    for (int i = 1; i <= nums.Length; i++)
     {
-        if (set.Contains(num))
+        if (!numbers.Contains(i))
         {
-            set.Remove(num);
+            missingNumbers.Add(i);
         }
     }
 
-    set.First();
-    return set.ToArray();
+    return missingNumbers;
 }

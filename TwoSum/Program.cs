@@ -18,19 +18,21 @@ namespace TwoSum
         
         public static int[] TwoSum(int[] nums, int target)
         {
-            Dictionary<int, int> dictionary = new Dictionary<int, int>();
-            for (int i = 0; i < nums.Length; i++)
+            var dictionary = new Dictionary<int, int>();
+        
+            for(int i = 0; i < nums.Length; i++)
             {
-                var diff = target - nums[i];
-                if (dictionary.ContainsKey(diff))
-                {
-                    return new[] { dictionary[diff], i };
-                }
-                
-                dictionary.Add(nums[i], i);
-            }
+                var difference = target - nums[i];
             
-            return Array.Empty<int>();
+                if(dictionary.ContainsKey(difference))
+                {
+                    return new int[] {dictionary[difference], i};
+                }
+            
+                dictionary[nums[i]] = i;
+            }
+        
+            return nums;
         }
 
     }
