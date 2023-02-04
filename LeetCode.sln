@@ -64,6 +64,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Min_Max_Sum", "Min_Max_Sum\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find_Median", "Find_Median\Find_Median.csproj", "{8F1AC8F2-557B-4386-9C3A-6499C442C7D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagonal_Difference", "Diagonal_Difference\Diagonal_Difference.csproj", "{064CE927-D534-4473-9BB5-D55799643CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counting_Sort_1", "Counting_Sort_1\Counting_Sort_1.csproj", "{72E5330F-125C-4965-BFA3-23ADB56D3E5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,5 +202,13 @@ Global
 		{8F1AC8F2-557B-4386-9C3A-6499C442C7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F1AC8F2-557B-4386-9C3A-6499C442C7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F1AC8F2-557B-4386-9C3A-6499C442C7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{064CE927-D534-4473-9BB5-D55799643CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{064CE927-D534-4473-9BB5-D55799643CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{064CE927-D534-4473-9BB5-D55799643CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{064CE927-D534-4473-9BB5-D55799643CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E5330F-125C-4965-BFA3-23ADB56D3E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E5330F-125C-4965-BFA3-23ADB56D3E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E5330F-125C-4965-BFA3-23ADB56D3E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E5330F-125C-4965-BFA3-23ADB56D3E5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

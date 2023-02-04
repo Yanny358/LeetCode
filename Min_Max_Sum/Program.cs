@@ -21,7 +21,6 @@ void miniMaxSum(List<int> arr)
         {
             min = n;
         }
-
     }
 
     Console.WriteLine($"{sum - max} {sum - min}");
