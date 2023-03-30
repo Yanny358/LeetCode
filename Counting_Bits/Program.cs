@@ -12,16 +12,16 @@ int[] CountBits(int n)
     return arrOfBits;
 }
 
-int Count1Bit(int no)
+int Count1Bit(int number)
 {
     int count = 0;
-    if (no <= 0)
+    if (number <= 0)
         throw new Exception("No. should be greater than 0");
-    while (no > 0)
+    while (number > 0)
     {
-        if (no % 2 != 0)
+        if (number % 2 != 0)
             count++;
-        no /= 2;
+        number /= 2;
     }
     return count;
 }

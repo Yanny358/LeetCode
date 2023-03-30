@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-string[] strings = new[] { "ab", "a" };
+string[] strings = new[] { "flower","flow","flight" };
 Console.WriteLine(LongestCommonPrefix(strings));
 
 string LongestCommonPrefix(string[] strs)
